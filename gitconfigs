@@ -1,0 +1,15 @@
+[user]
+        email = gilad24@gmail.com
+        name = GiladB
+[alias]
+        ll = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        branch-name = !git rev-parse --abbrev-ref HEAD
+        publish = !git push -u origin $(git branch-name)
+        publish-f = !git push -f -u origin $(git branch-name)
+        unpublish = !git push origin :$(git branch-name)
+[core]
+        editor = vim
+
+[color]
+        ui = true
+
